@@ -1,0 +1,45 @@
+
+.map-tracker {
+  background-color: #fdf4ff;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.map-stop {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.map-stop.unlocked {
+  border-color: #85e085;
+  background-color: #f0fff4;
+}
+
+.map-stop .emoji {
+  font-size: 2rem;
+}
+
+.map-stop .label {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.map-stop .today {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #555;
+}
