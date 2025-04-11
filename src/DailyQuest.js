@@ -1,14 +1,14 @@
 
 import React, { useState, useEffect } from "react";
 import QUESTION_BANK from "./QuestionBank";
+import MAP_DATA from "./MapData";
 
-export default function DailyQuest({ player }) {
+export default function DailyQuest({ player, onComplete }) {
   const today = new Date().toISOString().split("T")[0];
   const todaysQuestions = QUESTION_BANK[today]?.[player.name] || [];
   const [answers, setAnswers] = useState(() =>
     JSON.parse(localStorage.getItem(`${today}_${player.name}`) || "{}")
   );
-  const [confetti, setConfetti] = useState(false);
 
   useEffect(() => {
     localStorage.setItem(`${today}_${player.name}`, JSON.stringify(answers));
@@ -19,9 +19,10 @@ export default function DailyQuest({ player }) {
     const correct = todaysQuestions[index].answer === selected;
     const updated = { ...answers, [index]: { selected, correct } };
     setAnswers(updated);
-    if (correct) {
-      setConfetti(true);
-      setTimeout(() => setConfetti(false), 1500);
+    const complete = Object.keys(updated).length === 5;
+    if (complete && onComplete) {
+      const locationName = MAP_DATA[today]?.location || "a new area";
+      onComplete(locationName);
     }
   };
 
