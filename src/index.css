@@ -1,4 +1,62 @@
 
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Background Themes */
+.default-bg {
+  background: linear-gradient(135deg, #ffd6e9, #ffe4f7, #e0f7ff, #d0ffe5);
+}
+
+.rainbow-bg {
+  background: linear-gradient(to right, #ffb3ec, #c3c9ff, #a0ffe3, #ffd6e9);
+}
+
+.jack-bg {
+  background: linear-gradient(to right, #cceeff, #b2f0e6);
+}
+
+.ryleigh-bg {
+  background: linear-gradient(to right, #f9c2ff, #ffb6d5);
+}
+
+/* Quiz Cards */
+.quiz-card {
+  background: #fff;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+.finished-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e8b57;
+  margin-top: 1rem;
+}
+
+.restart {
+  margin-top: 1rem;
+  background-color: #ff69b4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Unlock Popup */
 .unlock-popup {
   background: #fff3cd;
   border: 2px solid #f0c36d;
