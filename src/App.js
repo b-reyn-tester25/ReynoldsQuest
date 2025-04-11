@@ -11,15 +11,19 @@ export default function App() {
   const [player, setPlayer] = useState(null);
 
   const today = new Date().toISOString().split("T")[0];
-  const availableDates = Object.keys(localStorage);
-  const playerProgress = {};
+const availableDates = Object.keys(localStorage).filter(
+  (key) => key.match(/^2025-04-\d{2}$/) // only date-formatted keys
+);
 
-  availableDates.forEach((date) => {
-    const stored = localStorage.getItem(date);
-    if (stored) {
-      playerProgress[date] = JSON.parse(stored);
-    }
-  });
+const playerProgress = {};
+availableDates.forEach((date) => {
+  const stored = localStorage.getItem(date);
+  try {
+    playerProgress[date] = JSON.parse(stored);
+  } catch (err) {
+    console.error(`Failed to parse data for ${date}:`, err);
+  }
+});
 
   return (
     <div className="app">
