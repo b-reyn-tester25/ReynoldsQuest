@@ -1,0 +1,42 @@
+
+body {
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ffd6e9, #ffe4f7, #e0f7ff);
+  color: #333;
+  margin: 0;
+  padding: 1rem;
+}
+
+.app {
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: #ff69b4;
+}
+
+.avatar-select .avatars button {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f0f8ff;
+  border: 2px solid #ccc;
+  cursor: pointer;
+}
+
+.daily-quest button {
+  margin-top: 1rem;
+  background-color: #ccf2ff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.progress-tracker {
+  margin-top: 2rem;
+  background: #fff3cd;
+  padding: 1rem;
+  border-radius: 10px;
+}
