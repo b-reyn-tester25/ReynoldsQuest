@@ -6,6 +6,8 @@ import DailyQuest from "./DailyQuest";
 import ProgressTracker from "./ProgressTracker";
 import MapTracker from "./MapTracker";
 import "./MapTracker.css";
+import MapTimeline from "./MapTimeline";
+import "./MapTimeline.css";
 
 export default function App() {
   const [player, setPlayer] = useState(null);
@@ -46,11 +48,15 @@ export default function App() {
         <AvatarSelect setPlayer={setPlayer} />
       ) : (
         <>
-          <h2>Hello, {player.name}!</h2>
-          <DailyQuest player={player} onComplete={(loc) => setJustUnlocked(loc)} />
-          <ProgressTracker player={player} />
-          <MapTracker playerProgress={playerProgress} />
-        </>
+  <h2>Hello, {player.name}!</h2>
+  <div className="main-layout">
+    <div style={{ flex: 1 }}>
+      <DailyQuest player={player} onComplete={(loc) => setJustUnlocked(loc)} />
+      <ProgressTracker player={player} />
+    </div>
+    <MapTimeline playerProgress={playerProgress} />
+  </div>
+</>
       )}
     </div>
   );
