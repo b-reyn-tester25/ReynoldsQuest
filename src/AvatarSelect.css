@@ -1,0 +1,57 @@
+
+.avatar-select {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.select-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.avatar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.avatar-button {
+  width: 160px;
+  height: 160px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.avatar-button:hover {
+  transform: scale(1.05);
+}
+
+.avatar-emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar-name {
+  font-size: 1.3rem;
+}
+
+.avatar-button.jack {
+  background: linear-gradient(to right, #a0e7ff, #b4f8c8);
+  color: #003366;
+}
+
+.avatar-button.ryleigh {
+  background: linear-gradient(to right, #ffb6d5, #f9c2ff);
+  color: #5a005a;
+}
