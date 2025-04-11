@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ReynoldsQuest/static/css/main.89ea927f.css",
+    "main.js": "/ReynoldsQuest/static/js/main.1a72c3ba.js",
+    "index.html": "/ReynoldsQuest/index.html",
+    "main.89ea927f.css.map": "/ReynoldsQuest/static/css/main.89ea927f.css.map",
+    "main.1a72c3ba.js.map": "/ReynoldsQuest/static/js/main.1a72c3ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89ea927f.css",
+    "static/js/main.1a72c3ba.js"
+  ]
+}
